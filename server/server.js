@@ -11,10 +11,9 @@ const app = express();
 
 const startServer = async () => {
   // create a new Apollo server and pass in our schema data
-  const server = new ApolloServer({
-    typeDefs,
-    resolvers,
-    context: authMiddleware
+  const server = new ApolloServer({ 
+    typeDefs, 
+    resolvers
   });
 
   // Start the Apollo server
